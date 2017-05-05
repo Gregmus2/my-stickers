@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "A little drunk stickers",
+  "description": "Добавляет стикеры в вк",
+  "version": "1.0",
+
+  "permissions": [ "tabs", "storage", "http://wearestickers.esy.es/*", "http://*/*", "https://*/*" ],
+
+  "icons": {
+    "128": "128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://vk.com/*"],
+      "js": ["jquery.js", "vk_inject.js"],
+      "css": ["vk_styles.css"]
+    }
+  ],
+
+  "background": { "scripts": [ "background.js" ]}
+
+
+
+
+}
